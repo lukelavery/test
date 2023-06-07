@@ -16,4 +16,4 @@ jobs:
       - name: Hello world action step
         uses: lukelavery/hello-world-docker-action@v1
         with:
-          who-to-greet: {{ github.event.issue.title }}
+          who-to-greet: "${{ github.event.issue.title }}"
