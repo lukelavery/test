@@ -1,0 +1,14 @@
+name: On Issue
+
+jobs:
+  print_issue:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Check out repo
+      uses: actions/checkout@
+      
+    - name: Hello world action step
+      uses: lukelavery/hello-world-docker-action@v1
+      with:
+        who-to-greet: {{ github.event.issue.title }}
